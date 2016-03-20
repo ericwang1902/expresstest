@@ -46,8 +46,7 @@ router.get('/', wechat(config, function (req, res, next) {
   }
 }));*/
 router.get('/',function(req,res,next){
-  res.write('test');
-  res.end();
+  res.send('respond with a resource');
 })
 
 module.exports = router;
