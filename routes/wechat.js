@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var wechat = require('wechat');
 
 var config = {
   token:'RobustCRMHelper',
