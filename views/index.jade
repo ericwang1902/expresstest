@@ -2,4 +2,16 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  form.form-horizontal
+    div.form-group
+      label.col-sm-2.contol-label 用户名
+      div.col-sm-10
+        input#username.form-control
+    div.form-group
+      label.col-sm-2.contol-label 密码
+      div.col-sm-10
+        input#pwd.form-control
+    div.form-group
+      div.col-sm-offset-2.col-sm-10
+        buttn.btn.btn-primary(type='submit' onClick='loginClick()') 提交
+

@@ -7,6 +7,13 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var login = require('./routes/login');
+var wechat = require('wechat');
+var config = {
+  token:'RobustCRMHelper',
+  appid:'wx45eb07597f1e004a',
+  encodingAESKey:'GwpmVSoQTqy55MMPA4qKyTTiQkFs8sPiSt5ou3Z0lSI'
+}
 
 var app = express();
 
@@ -24,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/login',login);
+app.use('/wechat',wechat);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
