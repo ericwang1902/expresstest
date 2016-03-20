@@ -28,7 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/login',login);
-app.use(express.query());
 app.use('/wechat',wechat1);
 
 // catch 404 and forward to error handler
