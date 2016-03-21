@@ -1,9 +1,17 @@
 extend mobileindex
 block content
-  div.weui_cells_title 表单
+  div.weui_cells_title 寄件人信息
   div.weui_cells.weui_cells_form
     div.weui_cell
       div.weui_cell_hd
-        label.weui_label qq
+        label.weui_label 姓名
       div.weui_cell_bd.weiui_cell_primary
-        input.weui_input(type="tel",placeholder="请输入寄件人名称")
+        input#sentname.weui_input(type="text",placeholder="寄件人姓名")
+    div.weui_cell    
+      div.weui_cell_hd
+        label.weui_label 电话
+      div.weui_cell_bd.weui_cell_primary
+        input#sentnumber.weui_input(type="tel",placeholder="寄件人电话")
+    div.weui_cell_hd
+      div.button_sp_area
+        button.weui_btn.weui_btn_primary(type='submit' onClick='createsentinfo()')  提交

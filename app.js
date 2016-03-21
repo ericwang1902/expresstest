@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/apis/users');
 var login = require('./routes/apis/login');
-
 var wechats = require('./routes/apis/wechats');
+var sentinfo = require('./routes/apis/sentinfo');
 
 var app = express();
 
@@ -29,6 +29,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/login', login);
 app.use('/wechat', wechats);
+app.use('/sentinfo',sentinfo);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
