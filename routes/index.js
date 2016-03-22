@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('mobile/sentinfo');
+  res.send("开发中！");
 });
 
 module.exports = router;

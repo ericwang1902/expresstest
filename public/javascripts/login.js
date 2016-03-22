@@ -1,7 +1,7 @@
    //登录
         function loginClick(){
             var user = $("#username").val();
-            var pwd = $("pwd").val();
+            var pwd = $("#pwd").val();
             $.post("/login", {"user": user,"pwd":pwd}, function(data, status){
                 
                 data = $.parseJSON(data);
