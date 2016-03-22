@@ -6,10 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/apis/users');
 var login = require('./routes/apis/login');
 var wechats = require('./routes/apis/wechats');
-var sentinfo = require('./routes/apis/sentinfo');
+
+var sentinfo = require('./routes/pages/sentinfo');
 
 var app = express();
 
@@ -26,9 +26,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+
+//pcweb
 app.use('/login', login);
+
+//wechat
 app.use('/wechat', wechats);
+
+//mobile
 app.use('/sentinfo',sentinfo);
 
 
@@ -46,7 +51,7 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.render('pcweb/error', {
       message: err.message,
       error: err
     });
@@ -57,7 +62,7 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  res.render('error', {
+  res.render('pcweb/error', {
     message: err.message,
     error: {}
   });
