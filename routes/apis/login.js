@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
   console.info(req.body.user);
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Headers", "X-Requested-With")
-  //res.writeHead(200,{'Content-Type': 'text/plain'});
+  res.header(200,{'Content-Type': 'text/plain'});
   res.send(JSON.stringify(data));
 });
 
