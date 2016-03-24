@@ -11,8 +11,7 @@ router.post('/', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Headers", "X-Requested-With")
   //res.writeHead(200,{'Content-Type': 'text/plain'});
-  res.write(JSON.stringify(data));
-  res.end();
+  res.send(JSON.stringify(data));
 });
 
 module.exports = router;
