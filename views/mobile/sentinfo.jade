@@ -1,12 +1,32 @@
 extend mobileindex
 block content
-  div.weui_cells_title 寄件人信息
+  div.weui_cells_title 信息
   div.weui_cells.weui_cells_form
     div.weui_cell
       div.weui_cell_hd
         label.weui_label 姓名
       div.weui_cell_bd.weiui_cell_primary
         input#sentname.weui_input(type="text",placeholder="寄件人姓名")
+    div.weui_cell    
+      div.weui_cell_hd
+        label.weui_label 手机
+      div.weui_cell_bd.weui_cell_primary
+        input#sentnumber.weui_input(type="tel",placeholder="寄件人电话")
+    div.weui_cell    
+      div.weui_cell_hd
+        label.weui_label 省
+      div.weui_cell_bd.weui_cell_primary
+        input#sentnumber.weui_input(type="tel",placeholder="寄件人电话")
+    div.weui_cell
+      div.weui_cell_hd
+        label.weui_label 姓名
+      div.weui_cell_bd.weiui_cell_primary
+        input#sentname.weui_input(type="text",placeholder="寄件人姓名")
+    div.weui_cell    
+      div.weui_cell_hd
+        label.weui_label 电话
+      div.weui_cell_bd.weui_cell_primary
+        input#sentnumber.weui_input(type="tel",placeholder="寄件人电话")
     div.weui_cell    
       div.weui_cell_hd
         label.weui_label 电话

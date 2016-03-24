@@ -8,6 +8,8 @@ router.post('/', function(req, res, next) {
   var data = {key: 'value', hello: 'world'};//
   console.info(req.body);
   console.info(req.body.user);
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Headers", "X-Requested-With")
   res.writeHead(200,{'Content-Type': 'text/plain'});
   res.write(JSON.stringify(data));
   res.end();
