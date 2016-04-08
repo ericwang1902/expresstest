@@ -1,9 +1,12 @@
+
 var express = require('express');
 var router = express.Router();
+var thing = require('./apis/thing/index');
+var person = require('./apis/person/index');
+var order = require('./apis/order/index')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.send("开发中！");
-});
+router.use('/thing', thing);
+router.use('/person',person);
+router.use('/order',order);
 
 module.exports = router;

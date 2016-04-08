@@ -15,9 +15,9 @@ var config={
 
 module.exports= wechat(config).text(function(message,req,res,net){
   console.log(message);
-  res.reply('更简化的API设计！')
+  res.reply('更简化的API设计！');
 }).image(function(message,req,res,net){
-
+  
 }).voice(function (message, req, res, next) {
   // TODO
 }).video(function (message, req, res, next) {
